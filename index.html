@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFI Hours Tracking Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CFI Hours Tracking Tool</h1>
+
+        <form id="flightForm">
+            <label for="start">Engine Start Time:</label>
+            <input type="datetime-local" id="start" name="start" required>
+
+            <label for="end">Engine Shut Down Time:</label>
+            <input type="datetime-local" id="end" name="end" required>
+
+            <button type="submit">Add Flight</button>
+        </form>
+
+        <div id="flightsContainer">
+            <h2>Logged Flights</h2>
+            <ul id="flightsList"></ul>
+        </div>
+
+        <div id="summary">
+            <p id="totalHours">Total Hours Today: 0</p>
+            <p id="remainingHours">Hours Available in Current 24-hour Period: 8</p>
+            <p id="resetTime">Next Reset Time: N/A</p>
+        </div>
+
+        <div id="visualContainer">
+            <h2>24-Hour Rolling Period</h2>
+            <div id="timeBarContainer">
+                <div id="timeBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
